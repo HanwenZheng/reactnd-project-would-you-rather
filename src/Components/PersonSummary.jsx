@@ -4,7 +4,9 @@ class PersonSummary extends Component {
   render() {
     return (
       <div>
-        <div>Personal Summary</div>
+        <div>
+          Personal Summary: {this.props.place} {this.props.user.name}
+        </div>
       </div>
     );
   }
