@@ -1,4 +1,4 @@
-import * as Actions from "../actions";
+import * as Actions from "../Actions";
 
 const HomeReducer = (state = {}, action) => {
   switch (action.type) {

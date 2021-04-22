@@ -6,8 +6,8 @@ import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
-import reducer from "./reducers";
-import middleware from "./middleware";
+import reducer from "./Reducers";
+import middleware from "./Middleware";
 
 const store = createStore(reducer, middleware);
 
