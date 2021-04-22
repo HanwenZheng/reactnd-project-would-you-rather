@@ -14,10 +14,10 @@ class NavBar extends Component {
           <NavLink to="/" exact activeClassName={styles.active}>
             <div className={styles.tab}>Home</div>
           </NavLink>
-          <NavLink to="/NewQuestion" exact activeClassName={styles.active}>
+          <NavLink to="/newQuestion" exact activeClassName={styles.active}>
             <div className={styles.tab}>New Question</div>
           </NavLink>
-          <NavLink to="/LeaderBoard" exact activeClassName={styles.active}>
+          <NavLink to="/leaderBoard" exact activeClassName={styles.active}>
             <div className={styles.tab}>Leader Board</div>
           </NavLink>
         </div>
