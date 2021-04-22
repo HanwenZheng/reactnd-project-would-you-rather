@@ -1,11 +1,11 @@
 import * as Actions from "../Actions";
 
-const HomeReducer = (state = {}, action) => {
+const HomeReducer = (state = { curUser: "Alex" }, action) => {
   switch (action.type) {
     case Actions.SET_TEXT:
       return {
         ...state,
-        ...action.text,
+        curUser: action.text,
       };
     default:
       return state;

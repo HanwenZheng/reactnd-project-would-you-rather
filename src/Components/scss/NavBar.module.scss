@@ -1,2 +1,34 @@
+//div {
+//  outline: 1px solid red;
+//}
+
 .NavBar {
+  width: 80vw;
+  height: 32px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  position: relative;
+  a {
+    color: black;
+  }
+  .tabs {
+    width: 40vw;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    left: 0;
+    .tab {
+      flex-grow: 1;
+    }
+  }
+  .info {
+    width: 30vw;
+    position: absolute;
+    right: 0;
+  }
+}
+
+.active {
+  font-weight: bold;
 }

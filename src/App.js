@@ -1,12 +1,16 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import NavBar from "./Components/NavBar";
+import { Route } from "react-router-dom";
+import Home from "./Views/Home";
+import styles from "./Components/scss/App.module.scss";
 
 class App extends Component {
   render() {
     return (
-      <Fragment>
+      <div className={styles.App}>
         <NavBar />
-      </Fragment>
+        <Route path="/" exact component={Home} />
+      </div>
     );
   }
 }
