@@ -1,6 +1,6 @@
 import * as Actions from "../Actions/Home";
 
-const HomeReducer = (state = { curUser: "Alex" }, action) => {
+const HomeReducer = (state = { curUser: "John Doe" }, action) => {
   switch (action.type) {
     case Actions.SET_CUR_USER:
       return {
