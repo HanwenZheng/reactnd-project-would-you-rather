@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import styles from "./scss/NavBar.module.scss";
 import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
-import * as Actions from "../Actions/index";
+import * as Actions from "../Actions/Home";
 
 class NavBar extends Component {
   render() {

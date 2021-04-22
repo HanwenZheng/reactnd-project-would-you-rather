@@ -1,4 +1,4 @@
-import * as Actions from "../Actions";
+import * as Actions from "../Actions/Home";
 
 const HomeReducer = (state = { curUser: "Alex" }, action) => {
   switch (action.type) {
@@ -6,6 +6,16 @@ const HomeReducer = (state = { curUser: "Alex" }, action) => {
       return {
         ...state,
         curUser: action.text,
+      };
+    case Actions.RECEIVE_USERS:
+      return {
+        ...state,
+        users: action.users,
+      };
+    case Actions.RECEIVE_QUESTIONS:
+      return {
+        ...state,
+        questions: action.questions,
       };
     default:
       return state;
