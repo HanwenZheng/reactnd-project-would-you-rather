@@ -1,10 +1,10 @@
 import { showLoading, hideLoading } from "react-redux-loading";
 import * as DATA from "../utils/_DATA";
 
-export const SET_TEXT = "SET_TEXT";
-export const setText = (text) => ({
-  type: SET_TEXT,
-  text,
+export const SET_CUR_USER = "SET_CUR_USER";
+export const setText = (curUser) => ({
+  type: SET_CUR_USER,
+  curUser,
 });
 
 export const RECEIVE_USERS = "RECEIVE_USERS";

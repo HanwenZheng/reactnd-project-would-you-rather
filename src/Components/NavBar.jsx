@@ -39,9 +39,9 @@ class NavBar extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = ({ home }) => {
   return {
-    curUser: state.home.curUser,
+    curUser: home.curUser,
   };
 };
 

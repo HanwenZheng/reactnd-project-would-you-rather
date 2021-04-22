@@ -2,10 +2,10 @@ import * as Actions from "../Actions/Home";
 
 const HomeReducer = (state = { curUser: "Alex" }, action) => {
   switch (action.type) {
-    case Actions.SET_TEXT:
+    case Actions.SET_CUR_USER:
       return {
         ...state,
-        curUser: action.text,
+        curUser: action.curUser,
       };
     case Actions.RECEIVE_USERS:
       return {
