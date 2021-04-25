@@ -27,3 +27,9 @@ export const handleInitialData = () => async (dispatch) => {
   dispatch(receiveQuestions(questions));
   dispatch(hideLoading());
 };
+
+export const newQuestion = (question) => async (dispatch) => {
+  dispatch(showLoading());
+  await DATA._saveQuestion(question);
+  dispatch(hideLoading());
+};

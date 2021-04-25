@@ -42,7 +42,7 @@ class SignIn extends Component {
               ))}
             </select>
           </label>
-          <input type="submit" value="signIn" />
+          <input type="submit" value="signIn" disabled={this.state.value === ""} />
         </form>
       </div>
     );
