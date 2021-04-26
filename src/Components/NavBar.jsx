@@ -3,7 +3,7 @@ import styles from "./scss/NavBar.module.scss";
 import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 import * as Actions from "../Actions/Home";
-
+// this changes everything...
 class NavBar extends Component {
   render() {
     const { curUser, dispatch } = this.props;
