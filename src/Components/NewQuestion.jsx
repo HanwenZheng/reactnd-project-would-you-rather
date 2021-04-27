@@ -21,8 +21,7 @@ class NewQuestion extends Component {
   }
 
   handleSubmit(event) {
-    console.log({ ...this.state, author: this.props.home.curUser });
-    this.props.dispatch(Actions.newQuestion({ ...this.state, author: this.props.home.curUser }));
+    this.props.dispatch(Actions.newQuestion({ ...this.state, author: this.props.home.curUser.id }));
     this.setState({ submit: true });
     event.preventDefault();
   }

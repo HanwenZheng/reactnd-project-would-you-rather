@@ -11,8 +11,8 @@ class Home extends Component {
         {!curUser && <SignIn />}
         {curUser &&
           questions &&
-          Object.values(questions).map((question) => (
-            <Question question={question} key={question.id} />
+          Object.values(questions).map((question, index) => (
+            <Question question={question} key={question.id} number={index} />
           ))}
       </Fragment>
     );

@@ -1,9 +1,9 @@
 import { showLoading, hideLoading } from "react-redux-loading";
 import * as DATA from "../utils/_DATA";
 
-export const SET_CUR_USER = "SET_CUR_USER";
-export const setText = (curUser) => ({
-  type: SET_CUR_USER,
+export const SET_USER = "SET_USER";
+export const setUser = (curUser) => ({
+  type: SET_USER,
   curUser,
 });
 
@@ -31,5 +31,7 @@ export const handleInitialData = () => async (dispatch) => {
 export const newQuestion = (question) => async (dispatch) => {
   dispatch(showLoading());
   await DATA._saveQuestion(question);
+  let questions = await DATA._getQuestions();
+  dispatch(receiveQuestions(questions));
   dispatch(hideLoading());
 };

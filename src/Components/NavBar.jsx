@@ -3,7 +3,7 @@ import styles from "./scss/NavBar.module.scss";
 import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 import * as Actions from "../Actions/Home";
-// this changes everything...
+
 class NavBar extends Component {
   render() {
     const { curUser, dispatch } = this.props;
@@ -23,11 +23,11 @@ class NavBar extends Component {
         </div>
         {curUser && (
           <div className={styles.info}>
-            Hello, {curUser + " "}
+            Hello, {curUser.name + " "}
             <button
               type="submit"
               onClick={() => {
-                dispatch(Actions.setText(null));
+                dispatch(Actions.setUser(null));
               }}
             >
               Logout

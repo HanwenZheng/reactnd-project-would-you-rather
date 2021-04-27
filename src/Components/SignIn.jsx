@@ -6,7 +6,7 @@ class SignIn extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: "",
+      value: this.props.home.curUser,
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -14,11 +14,13 @@ class SignIn extends Component {
   }
 
   handleChange(event) {
-    this.setState({ value: event.target.value });
+    this.setState({
+      value: Object.values(this.props.home.users).find((user) => user.name === event.target.value),
+    });
   }
 
   handleSubmit(event) {
-    this.props.dispatch(Actions.setText(this.state.value));
+    this.props.dispatch(Actions.setUser(this.state.value));
     event.preventDefault();
   }
 
@@ -31,7 +33,10 @@ class SignIn extends Component {
         <form onSubmit={this.handleSubmit}>
           <label>
             signIn:
-            <select value={this.state.value} onChange={this.handleChange}>
+            <select
+              value={this.state.value ? this.state.value.name : ""}
+              onChange={this.handleChange}
+            >
               <option value="" disabled>
                 Select your user
               </option>

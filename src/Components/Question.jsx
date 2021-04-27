@@ -2,10 +2,12 @@ import React, { Component } from "react";
 
 class Question extends Component {
   render() {
-    const { question } = this.props;
+    const { question, number } = this.props;
     return (
       <div>
-        <div>Question: {question.id}</div>
+        <div>
+          Question{number + 1}: {question.id}
+        </div>
       </div>
     );
   }
