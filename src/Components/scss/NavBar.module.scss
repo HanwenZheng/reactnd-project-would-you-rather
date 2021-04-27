@@ -3,7 +3,7 @@
 //}
 
 .NavBar {
-  width: 80vw;
+  width: 100%;
   height: 32px;
   margin: 0 auto;
   display: flex;
@@ -18,12 +18,13 @@
     justify-content: space-around;
     position: absolute;
     left: 0;
+    text-align: center;
     .tab {
       flex-grow: 1;
     }
   }
   .info {
-    width: 30vw;
+    flex-grow: 1;
     position: absolute;
     right: 0;
   }

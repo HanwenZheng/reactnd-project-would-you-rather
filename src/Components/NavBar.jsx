@@ -11,7 +11,7 @@ class NavBar extends Component {
     return (
       <div className={styles.NavBar}>
         <div className={styles.tabs}>
-          <NavLink to="/" exact activeClassName={styles.active}>
+          <NavLink to="/home" exact activeClassName={styles.active}>
             <div className={styles.tab}>Home</div>
           </NavLink>
           <NavLink to="/newQuestion" exact activeClassName={styles.active}>

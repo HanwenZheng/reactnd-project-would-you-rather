@@ -29,7 +29,7 @@ class NewQuestion extends Component {
     const { curUser } = this.props.home;
     return (
       <div>
-        {this.state.submit && <Redirect to="/" />}
+        {this.state.submit && <Redirect to="/home" />}
         {!curUser && <SignIn />}
         {curUser && (
           <div>

@@ -22,10 +22,10 @@ class App extends Component {
         <LoadingBarContainer style={{ position: "fixed" }} />
         <NavBar />
         <Switch>
-          <Route path="/" exact component={Home} />
+          <Route path="/home" exact component={Home} />
           <Route path="/newQuestion" component={NewQuestion} />
           <Route path="/leaderBoard" component={LeaderBoard} />
-          <Route path="/question" component={Question} />
+          <Route path="/questions" component={Question} />
           <Route path="/" component={page404} />
         </Switch>
       </div>
