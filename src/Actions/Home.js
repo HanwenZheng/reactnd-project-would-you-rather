@@ -31,8 +31,14 @@ export const handleInitialData = () => async (dispatch) => {
 export const newQuestion = (question) => async (dispatch) => {
   dispatch(showLoading());
   await DATA._saveQuestion(question);
-  let questions = await DATA._getQuestions();
-  dispatch(receiveQuestions(questions));
+  handleInitialData();
+  dispatch(hideLoading());
+};
+
+export const saveQuestion = (option) => async (dispatch) => {
+  dispatch(showLoading());
+  await DATA._saveQuestionAnswer(option);
+  handleInitialData();
   dispatch(hideLoading());
 };
 

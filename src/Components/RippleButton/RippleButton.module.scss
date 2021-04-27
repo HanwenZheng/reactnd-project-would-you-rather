@@ -34,7 +34,10 @@
   0% {
     width: 0;
     height: 0;
-    opacity: 0.5;
+    opacity: 0.6;
+  }
+  70% {
+    opacity: 0;
   }
   100% {
     width: rem(500px);

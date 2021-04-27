@@ -41,7 +41,10 @@ class RippleButton extends Component {
           this.props.variant === "purple" ? styles.purple : "",
         ].join(" ")}
       >
-        <a onClick={this.handleClick}>
+        <a
+          onClick={this.state.ripples ? null : this.handleClick}
+          style={this.props.disabled ? { fontWeight: "bold" } : {}}
+        >
           {this.props.children}
           {
             <span

@@ -9,11 +9,22 @@ class Home extends Component {
     return (
       <Fragment>
         {!curUser && <SignIn />}
-        {curUser &&
-          questions &&
-          Object.values(questions).map((question, index) => (
-            <Question question={question} key={question.id} number={index} />
-          ))}
+        {curUser && questions && (
+          <div>
+            <p>Unanswered</p>
+            {Object.values(questions)
+              .filter((question) => !(question.id in curUser.answers))
+              .map((question, index) => (
+                <Question question={question} key={question.id} number={index} />
+              ))}
+            <p>Answered</p>
+            {Object.values(questions)
+              .filter((question) => question.id in curUser.answers)
+              .map((question, index) => (
+                <Question question={question} key={question.id} number={index} />
+              ))}
+          </div>
+        )}
       </Fragment>
     );
   }
