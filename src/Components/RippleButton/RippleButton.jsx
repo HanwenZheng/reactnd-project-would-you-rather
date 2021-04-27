@@ -41,7 +41,7 @@ class RippleButton extends Component {
           this.props.variant === "purple" ? styles.purple : "",
         ].join(" ")}
       >
-        <a href="#" onClick={this.handleClick}>
+        <a onClick={this.handleClick}>
           {this.props.children}
           {
             <span
