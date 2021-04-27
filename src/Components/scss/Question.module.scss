@@ -3,9 +3,30 @@
     //outline: 1px solid red;
   }
   width: 80%;
-  margin: 0 auto;
+  margin: 15px auto;
+  .corner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    background-color: #00838d;
+    border-radius: 0 4px 0 32px;
+    .arrow {
+      margin-top: -4px;
+      margin-right: -4px;
+      color: white;
+    }
+  }
+
   .title {
     font-weight: bold;
+    line-height: 30px;
+    padding-left: 10px;
   }
   .card {
     display: flex;
@@ -17,14 +38,25 @@
         width: 80px;
         display: block;
         margin: auto;
+        transform: translateY(10px);
       }
     }
-
     .details {
       display: flex;
       flex-direction: column;
       > div {
         flex-grow: 1;
+        line-height: 25px;
+      }
+      .wyr {
+        font-style: italic;
+      }
+      .options {
+        font-weight: bold;
+      }
+      .view > div {
+        margin: 6px 0;
+        display: inline-block;
       }
     }
   }

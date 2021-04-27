@@ -9,6 +9,11 @@ class RippleButton extends Component {
   handleClick = (e) => {
     e.preventDefault();
     if (this.props.onClick) this.props.onClick();
+    if (this.props.to) {
+      setTimeout(() => {
+        this.props.history.push(this.props.to);
+      }, 800);
+    }
     if (!this.state.ripples) {
       let rect = e.target.getBoundingClientRect();
       let x = e.clientX - rect.left;

@@ -1,5 +1,5 @@
 @function rem($size) {
-  @return #{$size/16px}rem;
+  @return #{$size/16px / 3 * 2}rem;
 }
 
 .RippleButton {
@@ -7,11 +7,10 @@
     position: relative;
     display: inline-block;
     padding: rem(12px) rem(36px);
-    margin: rem(10px) 0;
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: rem(18px);
+    font-size: rem(22px);
     letter-spacing: rem(2px);
     border-radius: rem(40px);
     overflow: hidden;

@@ -35,3 +35,10 @@ export const newQuestion = (question) => async (dispatch) => {
   dispatch(receiveQuestions(questions));
   dispatch(hideLoading());
 };
+
+export const msLoading = (ms) => (dispatch) => {
+  dispatch(showLoading());
+  setTimeout(() => {
+    dispatch(hideLoading());
+  }, ms);
+};
