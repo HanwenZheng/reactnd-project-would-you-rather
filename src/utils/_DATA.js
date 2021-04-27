@@ -1,10 +1,12 @@
-import boy from "../Assets/Img/boy.svg";
+import boy from "../Assets/Img/man.svg";
+import girl from "../Assets/Img/girl-1.svg";
+import girl2 from "../Assets/Img/man-4.svg";
 
 let users = {
   sarahedo: {
     id: "sarahedo",
     name: "Sarah Edo",
-    avatarURL: boy,
+    avatarURL: girl,
     answers: {
       "8xf0y6ziyjabvozdd253nd": "optionOne",
       "6ni6ok3ym7mf1p33lnez": "optionTwo",
@@ -16,7 +18,7 @@ let users = {
   tylermcginnis: {
     id: "tylermcginnis",
     name: "Tyler McGinnis",
-    avatarURL: boy,
+    avatarURL: girl2,
     answers: {
       vthrdm985a262al8qx3do: "optionOne",
       xj352vofupe1dqz9emx13r: "optionTwo",

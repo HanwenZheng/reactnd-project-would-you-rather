@@ -12,8 +12,9 @@ class LeaderBoard extends Component {
       }
       rankedUsers = Object.values(users)
         .sort((a, b) => b.score - a.score)
-        .filter((user, i) => i + 1 <= 3);
+        .filter((user, i) => i + 1 <= 3); // get top 3
     }
+    console.log(rankedUsers);
     return (
       <div>
         {rankedUsers &&

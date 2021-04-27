@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import NavBar from "./Components/NavBar";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import Home from "./Views/Home";
 import styles from "./Components/scss/App.module.scss";
 import LeaderBoard from "./Views/LeaderBoard";
@@ -22,6 +22,9 @@ class App extends Component {
         <LoadingBarContainer style={{ position: "fixed" }} />
         <NavBar />
         <Switch>
+          <Route path="/" exact>
+            <Redirect to="/home" />
+          </Route>
           <Route path="/home" exact component={Home} />
           <Route path="/newQuestion" component={NewQuestion} />
           <Route path="/leaderBoard" component={LeaderBoard} />

@@ -1,0 +1,31 @@
+.Question {
+  div {
+    //outline: 1px solid red;
+  }
+  width: 80%;
+  margin: 0 auto;
+  .title {
+    font-weight: bold;
+  }
+  .card {
+    display: flex;
+    .avatar {
+      width: 25%;
+      height: 100px;
+      img {
+        height: 80px;
+        width: 80px;
+        display: block;
+        margin: auto;
+      }
+    }
+
+    .details {
+      display: flex;
+      flex-direction: column;
+      > div {
+        flex-grow: 1;
+      }
+    }
+  }
+}
