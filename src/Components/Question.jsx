@@ -3,6 +3,7 @@ import styles from "./scss/Question.module.scss";
 import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 import { Card } from "react-card-component";
+import RippleButton from "./RippleButton/RippleButton";
 
 class Question extends Component {
   capitalizeFirstLetter = (string) => {
@@ -30,7 +31,7 @@ class Question extends Component {
                   </div>
                   <div className={styles.view}>
                     <NavLink to={`/questions/${question.id}`} exact activeClassName={styles.active}>
-                      View Poll
+                      <RippleButton variant="blue">View Poll</RippleButton>
                     </NavLink>
                   </div>
                 </div>
