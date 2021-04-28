@@ -40,7 +40,7 @@ export const saveQuestion = (option) => async (dispatch) => {
   dispatch(showLoading());
   await DATA._saveQuestionAnswer(option);
   await dispatch(handleInitialData());
-  option.history.push("/home");
+  // option.history.push("/home");
   dispatch(hideLoading());
 };
 

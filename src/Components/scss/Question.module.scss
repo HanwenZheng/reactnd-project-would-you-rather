@@ -17,6 +17,7 @@
     right: 0;
     background-color: #00838d;
     border-radius: 0 4px 0 32px;
+    transition: all 350ms;
     .arrow {
       margin-top: -4px;
       margin-right: -4px;
@@ -43,6 +44,8 @@
       }
     }
     .details {
+      padding-left: 10px;
+      flex-grow: 0.8;
       display: flex;
       flex-direction: column;
       > div {
@@ -52,8 +55,28 @@
       .wyr {
         font-style: italic;
       }
+      .res {
+        font-weight: bolder;
+        font-size: larger;
+      }
       .options {
+        display: flex;
+        flex-direction: column;
         font-weight: bold;
+      }
+      .results {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-weight: bold;
+        .votes {
+          text-align: center;
+          font-weight: normal;
+        }
+        p {
+          color: orange;
+          text-align: left;
+        }
       }
       .view > div {
         margin: 6px 0;
@@ -61,4 +84,12 @@
       }
     }
   }
+}
+
+.Question:hover .corner {
+  width: 48px;
+  height: 48px;
+  border-radius: 0 4px 0 48px;
+  font-weight: bolder;
+  font-size: larger;
 }

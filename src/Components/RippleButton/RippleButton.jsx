@@ -12,7 +12,7 @@ class RippleButton extends Component {
     if (this.props.to) {
       setTimeout(() => {
         this.props.history.push(this.props.to);
-      }, 800);
+      }, 1000);
     }
     if (!this.state.ripples) {
       let rect = e.target.getBoundingClientRect();
