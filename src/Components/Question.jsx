@@ -23,9 +23,9 @@ class Question extends Component {
 
   render() {
     let { home, question, number } = this.props;
-    if (!home.questions || this.state.submit) {
-      return <Redirect to="/home" />;
-    }
+    // if (!home.questions || this.state.submit) {
+    //   return <Redirect to="/home" />;
+    // }
 
     const id = this.props.location ? this.props.location.pathname.split("/")[2] : null;
     let general;
@@ -74,7 +74,7 @@ class Question extends Component {
         {!general && (
           <Card bordered outlined>
             <div className={styles.corner}>
-              <div className={styles.arrow}>#{number + 1}</div>
+              <div className={styles.arrow}>?</div>
             </div>
             <div className={styles.title}>{user.name} asks:</div>
             <div className={styles.card}>
@@ -124,11 +124,9 @@ class Question extends Component {
                             authedUser: home.curUser.id,
                             qid: id,
                             answer: this.state.option,
+                            history: this.props.history,
                           })
                         );
-                        setTimeout(() => {
-                          this.setState({ submit: true });
-                        }, 800);
                       }}
                     >
                       {this.state.buttonText}

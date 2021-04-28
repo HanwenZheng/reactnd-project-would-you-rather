@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import SignIn from "./SignIn";
 import { connect } from "react-redux";
-import { Redirect } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import * as Actions from "../Actions/Home";
 
 class NewQuestion extends Component {
@@ -10,26 +10,24 @@ class NewQuestion extends Component {
     this.state = {
       optionOneText: "",
       optionTwoText: "",
-      submit: false,
     };
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange(event) {
+  handleChange = (event) => {
     this.setState({ [event.target.name]: event.target.value });
-  }
+  };
 
-  handleSubmit(event) {
-    this.props.dispatch(Actions.newQuestion({ ...this.state, author: this.props.home.curUser.id }));
-    this.setState({ submit: true });
+  handleSubmit = (event) => {
+    this.props.dispatch(
+      Actions.newQuestion({ ...this.state, author: this.props.home.curUser.id }, this.props.history)
+    );
     event.preventDefault();
-  }
+  };
+
   render() {
     const { curUser } = this.props.home;
     return (
       <div>
-        {this.state.submit && <Redirect to="/home" />}
         {!curUser && <SignIn />}
         {curUser && (
           <div>
@@ -64,4 +62,4 @@ const mapStateToProps = ({ home }) => {
   };
 };
 
-export default connect(mapStateToProps)(NewQuestion);
+export default withRouter(connect(mapStateToProps)(NewQuestion));

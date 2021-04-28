@@ -28,17 +28,19 @@ export const handleInitialData = () => async (dispatch) => {
   dispatch(hideLoading());
 };
 
-export const newQuestion = (question) => async (dispatch) => {
+export const newQuestion = (question, history) => async (dispatch) => {
   dispatch(showLoading());
   await DATA._saveQuestion(question);
-  handleInitialData();
+  await dispatch(handleInitialData());
+  history.push("/home");
   dispatch(hideLoading());
 };
 
 export const saveQuestion = (option) => async (dispatch) => {
   dispatch(showLoading());
   await DATA._saveQuestionAnswer(option);
-  handleInitialData();
+  await dispatch(handleInitialData());
+  option.history.push("/home");
   dispatch(hideLoading());
 };
 
