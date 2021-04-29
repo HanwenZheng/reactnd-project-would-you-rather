@@ -1,9 +1,9 @@
 import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
-import SignIn from "../Components/SignIn";
-import Question from "../Components/Question";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
+import SignIn from "../Components/SignIn";
+import Question from "../Components/Question";
 
 class Home extends Component {
   render() {

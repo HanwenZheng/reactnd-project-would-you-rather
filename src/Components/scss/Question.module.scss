@@ -1,8 +1,5 @@
 .Question {
   cursor: default;
-  div {
-    //outline: 1px solid red;
-  }
   width: 80%;
   margin: 15px auto;
   .corner {
@@ -74,7 +71,6 @@
           font-weight: normal;
         }
         p {
-          color: orange;
           text-align: left;
         }
       }
@@ -92,4 +88,26 @@
   border-radius: 0 4px 0 48px;
   font-weight: bolder;
   font-size: larger;
+}
+
+.resCard {
+  padding-bottom: 18px;
+  .chosen {
+    animation-name: blink;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
 }

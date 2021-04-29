@@ -11,6 +11,8 @@ let users = {
       "8xf0y6ziyjabvozdd253nd": "optionOne",
       am8ehyc8byjqgar0jgpub9: "optionTwo",
       loxhs1bqm25b708cmbf3g: "optionTwo",
+      "6ni6ok3ym7mf1p33lnez": "optionOne",
+      "1ni6ok3ym7mf1p33lnez": "optionTwo",
     },
     questions: ["8xf0y6ziyjabvozdd253nd", "am8ehyc8byjqgar0jgpub9"],
   },
@@ -19,8 +21,11 @@ let users = {
     name: "Tyler McGinnis",
     avatarURL: girl2,
     answers: {
+      "1ni6ok3ym7mf1p33lnez": "optionOne",
       vthrdm985a262al8qx3do: "optionOne",
       xj352vofupe1dqz9emx13r: "optionTwo",
+      am8ehyc8byjqgar0jgpub9: "optionOne",
+      loxhs1bqm25b708cmbf3g: "optionOne",
     },
     questions: ["loxhs1bqm25b708cmbf3g", "vthrdm985a262al8qx3do"],
   },
@@ -32,6 +37,7 @@ let users = {
       xj352vofupe1dqz9emx13r: "optionOne",
       vthrdm985a262al8qx3do: "optionTwo",
       "6ni6ok3ym7mf1p33lnez": "optionTwo",
+      "8xf0y6ziyjabvozdd253nd": "optionTwo",
     },
     questions: ["6ni6ok3ym7mf1p33lnez", "xj352vofupe1dqz9emx13r"],
   },
@@ -44,11 +50,11 @@ let questions = {
     timestamp: 1467166872634,
     optionOne: {
       votes: ["sarahedo"],
-      text: "have horrible short term memory",
+      text: "have horrible short-term memory",
     },
     optionTwo: {
-      votes: [],
-      text: "have horrible long term memory",
+      votes: ["johndoe"],
+      text: "have horrible long-term memory",
     },
   },
   "6ni6ok3ym7mf1p33lnez": {
@@ -56,12 +62,25 @@ let questions = {
     author: "johndoe",
     timestamp: 1468479767190,
     optionOne: {
-      votes: [],
+      votes: ["sarahedo"],
       text: "become a superhero",
     },
     optionTwo: {
-      votes: ["johndoe", "sarahedo"],
+      votes: ["johndoe"],
       text: "become a supervillain",
+    },
+  },
+  "1ni6ok3ym7mf1p33lnez": {
+    id: "1ni6ok3ym7mf1p33lnez",
+    author: "johndoe",
+    timestamp: 1267166872634,
+    optionOne: {
+      votes: ["tylermcginnis"],
+      text: "The ability to have full control over your dreams",
+    },
+    optionTwo: {
+      votes: ["sarahedo"],
+      text: "Never have to sleep",
     },
   },
   am8ehyc8byjqgar0jgpub9: {
@@ -69,7 +88,7 @@ let questions = {
     author: "sarahedo",
     timestamp: 1488579767190,
     optionOne: {
-      votes: [],
+      votes: ["tylermcginnis"],
       text: "be telekinetic",
     },
     optionTwo: {
@@ -82,7 +101,7 @@ let questions = {
     author: "tylermcginnis",
     timestamp: 1482579767190,
     optionOne: {
-      votes: [],
+      votes: ["tylermcginnis"],
       text: "be a front-end developer",
     },
     optionTwo: {

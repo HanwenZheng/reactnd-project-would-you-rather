@@ -1,11 +1,11 @@
 import React, { Component, Fragment } from "react";
-import styles from "./scss/Question.module.scss";
-import { Redirect, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
+import { Redirect, withRouter } from "react-router-dom";
 import { Card } from "react-card-component";
+import { Line } from "rc-progress";
 import RippleButton from "./RippleButton/RippleButton";
 import * as Actions from "../Actions/Home";
-import { Line } from "rc-progress";
+import styles from "./scss/Question.module.scss";
 
 class Question extends Component {
   state = {
@@ -156,13 +156,17 @@ class Question extends Component {
               let twoPercent = (twoVotes / totalVotes) * 100;
               let chosenOne = home.curUser.answers[id] === "optionOne";
               return (
-                <Card bordered outlined>
+                <Card bordered outlined className={styles.resCard}>
                   {card(
                     "!",
                     <Fragment>
                       <div className={styles.res}>Results:</div>
                       <div className={styles.results}>
-                        <Card outlined={false} style={chosenOne ? { color: "orange" } : null}>
+                        <Card
+                          outlined={false}
+                          style={chosenOne ? { color: "orange" } : null}
+                          className={chosenOne ? styles.chosen : null}
+                        >
                           {chosenOne && <p>Your Choice: </p>}
                           {this.capitalizeFirstLetter(question.optionOne.text)}
                           <Line
@@ -174,7 +178,11 @@ class Question extends Component {
                             {`${oneVotes} out of ${totalVotes} votes`}
                           </div>
                         </Card>
-                        <Card outlined={false} style={!chosenOne ? { color: "orange" } : null}>
+                        <Card
+                          outlined={false}
+                          style={!chosenOne ? { color: "orange" } : null}
+                          className={!chosenOne ? styles.chosen : null}
+                        >
                           {!chosenOne && <p>Your Choice: </p>}
                           {this.capitalizeFirstLetter(question.optionTwo.text)}
                           <Line

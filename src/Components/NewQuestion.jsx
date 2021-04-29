@@ -32,13 +32,14 @@ class NewQuestion extends Component {
         {curUser && (
           <div>
             <p>New Question</p>
-            <form onSubmit={this.handleSubmit}>
+            <form onSubmit={this.handleSubmit} autoComplete="off">
               <label>Q1:</label>
               <input
                 type="text"
                 value={this.state.optionOneText}
                 name="optionOneText"
                 onChange={this.handleChange}
+                autoFocus={true}
               />
               <label>Q2:</label>
               <input
