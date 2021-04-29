@@ -20,6 +20,7 @@ class Home extends Component {
             <TabPanel>
               {Object.values(questions)
                 .filter((question) => !Object.keys(users[curUser.id].answers).includes(question.id))
+                .sort((a, b) => b.timestamp - a.timestamp)
                 .map((question, index) => (
                   <Question question={question} key={question.id} number={index} />
                 ))}
@@ -27,6 +28,7 @@ class Home extends Component {
             <TabPanel>
               {Object.values(questions)
                 .filter((question) => Object.keys(users[curUser.id].answers).includes(question.id))
+                .sort((a, b) => b.timestamp - a.timestamp)
                 .map((question, index) => (
                   <Question question={question} key={question.id} number={index} />
                 ))}

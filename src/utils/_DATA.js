@@ -73,10 +73,10 @@ let questions = {
   "1ni6ok3ym7mf1p33lnez": {
     id: "1ni6ok3ym7mf1p33lnez",
     author: "johndoe",
-    timestamp: 1267166872634,
+    timestamp: 1667166872634,
     optionOne: {
       votes: ["tylermcginnis"],
-      text: "The ability to have full control over your dreams",
+      text: "have full control over your dreams",
     },
     optionTwo: {
       votes: ["sarahedo"],
@@ -109,6 +109,19 @@ let questions = {
       text: "be a back-end developer",
     },
   },
+  ooxhs1bqm25b708cmbf3g: {
+    id: "ooxhs1bqm25b708cmbf3g",
+    author: "johndoe",
+    timestamp: 1182579767192,
+    optionOne: {
+      votes: [],
+      text: "React",
+    },
+    optionTwo: {
+      votes: [],
+      text: "Vue",
+    },
+  },
   vthrdm985a262al8qx3do: {
     id: "vthrdm985a262al8qx3do",
     author: "tylermcginnis",
@@ -124,7 +137,7 @@ let questions = {
   },
   xj352vofupe1dqz9emx13r: {
     id: "xj352vofupe1dqz9emx13r",
-    author: "johndoe",
+    author: "sarahedo",
     timestamp: 1493579767190,
     optionOne: {
       votes: ["johndoe"],
