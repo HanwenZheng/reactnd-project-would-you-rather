@@ -5,11 +5,12 @@ import "./utils/index.css";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
-import { createStore } from "redux";
+import { createStore, compose } from "redux";
 import reducer from "./Reducers";
 import middleware from "./Middleware";
 
-const store = createStore(reducer, middleware);
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const store = createStore(reducer, composeEnhancers(middleware));
 
 ReactDOM.render(
   <Provider store={store}>
