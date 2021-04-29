@@ -41,6 +41,7 @@ class RippleButton extends Component {
           this.props.variant === "purple" ? styles.purple : "",
         ].join(" ")}
       >
+        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
         <a
           onClick={this.state.ripples ? null : this.handleClick}
           style={this.props.disabled ? { fontWeight: "bold" } : {}}

@@ -12,8 +12,9 @@ import { connect } from "react-redux";
 import * as Actions from "./Actions/Home";
 
 class App extends Component {
-  componentDidMount() {
-    this.props.dispatch(Actions.handleInitialData());
+  async componentDidMount() {
+    await this.props.dispatch(Actions.handleInitialData());
+    await this.props.dispatch(Actions.setUser(this.props.home.users["johndoe"]));
   }
 
   render() {

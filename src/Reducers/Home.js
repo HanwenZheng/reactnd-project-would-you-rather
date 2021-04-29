@@ -14,13 +14,11 @@ const HomeReducer = (state = { curUser: null }, action) => {
           users: action.users,
         };
       } else {
-        {
-          return {
-            ...state,
-            users: action.users,
-            curUser: action.users[state.curUser.id],
-          };
-        }
+        return {
+          ...state,
+          users: action.users,
+          curUser: action.users[state.curUser.id],
+        };
       }
 
     case Actions.RECEIVE_QUESTIONS:
