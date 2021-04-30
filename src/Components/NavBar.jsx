@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styles from "./scss/NavBar.module.scss";
-import { NavLink } from "react-router-dom";
+import { NavLink, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import * as Actions from "../Actions/Home";
 

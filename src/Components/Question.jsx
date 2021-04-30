@@ -24,6 +24,11 @@ class Question extends Component {
 
   render() {
     let { home, question, number } = this.props;
+
+    if (!home.curUser) {
+      return <Redirect to="/home" />;
+    }
+
     const id = this.props.location ? this.props.location.pathname.split("/")[2] : null;
     let type;
     if (question) {
