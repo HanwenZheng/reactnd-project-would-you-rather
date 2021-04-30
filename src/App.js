@@ -10,6 +10,7 @@ import page404 from "./Views/page404";
 import LoadingBarContainer from "react-redux-loading";
 import { connect } from "react-redux";
 import * as Actions from "./Actions/Home";
+import { Scrollbars } from "react-custom-scrollbars-2";
 
 class App extends Component {
   async componentDidMount() {
@@ -20,18 +21,28 @@ class App extends Component {
   render() {
     return (
       <div className={styles.App}>
-        <LoadingBarContainer style={{ position: "fixed" }} />
-        <NavBar />
-        <Switch>
-          <Route path="/" exact>
-            <Redirect to="/home" />
-          </Route>
-          <Route path="/home" exact component={Home} />
-          <Route path="/newQuestion" component={NewQuestion} />
-          <Route path="/leaderBoard" component={LeaderBoard} />
-          <Route path="/questions" component={Question} />
-          <Route path="/" component={page404} />
-        </Switch>
+        <Scrollbars
+          autoHeight
+          autoHeightMax="100vh"
+          autoHide
+          autoHideTimeout={500}
+          autoHideDuration={500}
+        >
+          <div>
+            <LoadingBarContainer style={{ position: "fixed" }} />
+            <NavBar />
+            <Switch>
+              <Route path="/" exact>
+                <Redirect to="/home" />
+              </Route>
+              <Route path="/home" exact component={Home} />
+              <Route path="/newQuestion" component={NewQuestion} />
+              <Route path="/leaderBoard" component={LeaderBoard} />
+              <Route path="/questions" component={Question} />
+              <Route path="/" component={page404} />
+            </Switch>
+          </div>
+        </Scrollbars>
       </div>
     );
   }
