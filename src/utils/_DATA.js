@@ -26,6 +26,8 @@ let users = {
       xj352vofupe1dqz9emx13r: "optionTwo",
       am8ehyc8byjqgar0jgpub9: "optionOne",
       loxhs1bqm25b708cmbf3g: "optionOne",
+      loshs1bqm25b708cmbf3g: "optionOne", //dummy
+      lofhs1bqm25b708cmbf3g: "optionOne", //dummy
     },
     questions: ["loxhs1bqm25b708cmbf3g", "vthrdm985a262al8qx3do"],
   },
@@ -38,6 +40,8 @@ let users = {
       vthrdm985a262al8qx3do: "optionTwo",
       "6ni6ok3ym7mf1p33lnez": "optionTwo",
       "8xf0y6ziyjabvozdd253nd": "optionTwo",
+      xj352sfupe1dqz9emx13r: "optionOne",
+      xj352ssspe1dqz9emx13r: "optionOne", //dummy
     },
     questions: ["6ni6ok3ym7mf1p33lnez", "xj352vofupe1dqz9emx13r"],
   },
@@ -73,7 +77,7 @@ let questions = {
   "1ni6ok3ym7mf1p33lnez": {
     id: "1ni6ok3ym7mf1p33lnez",
     author: "johndoe",
-    timestamp: 1667166872634,
+    timestamp: 1519762172818,
     optionOne: {
       votes: ["tylermcginnis"],
       text: "have full control over your dreams",

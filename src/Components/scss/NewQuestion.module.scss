@@ -1,0 +1,21 @@
+.NewQuestion {
+  width: 80%;
+  margin: 15px auto;
+}
+
+.Card > div {
+  height: 170px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  div {
+    line-height: 30px;
+  }
+}
+
+.title {
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+}
